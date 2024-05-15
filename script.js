@@ -35,3 +35,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
+  document.querySelector('.btn-outline-success').addEventListener('click', function(event) {
+    event.preventDefault();
+    var searchQuery = document.querySelector('.form-control').value.toLowerCase().trim();
+    
+    
+    if (searchQuery.includes("phd")) {
+        window.location.href = 'phd.html';
+    } else if (searchQuery.includes("masters")) {
+        window.location.href = 'masters.html';
+    } else if (searchQuery.includes("undergrad")) {
+        window.location.href = 'undergrad.html';
+    } else {
+        alert('No results found for "' + searchQuery + '". Please try different keywords.');
+    }
+});

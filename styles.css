@@ -22,5 +22,22 @@
     flex-direction: column;
     justify-content: space-between; 
 }
+.custom-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.19); 
+}
+.row-spacing {
+    margin-bottom: 30px; 
+}
+.navbar .form-control {
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-outline-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
 
   
