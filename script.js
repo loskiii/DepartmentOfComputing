@@ -50,3 +50,35 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('No results found for "' + searchQuery + '". Please try different keywords.');
     }
 });
+
+document.querySelector('.btn-back').addEventListener('click', function() {
+  window.location.href = 'index.html'; // Change 'index.html' to the appropriate URL of your main page
+});
+
+// Get all elements with the class "animated-element"
+const animatedElements = document.querySelectorAll('.animated-element');
+
+// Function to check if an element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scrolling event
+function handleScroll() {
+    animatedElements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('animate');
+        }
+    });
+}
+
+// Add event listener for scroll event
+window.addEventListener('scroll', handleScroll);
+
+
